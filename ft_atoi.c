@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:42:34 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 16:57:21 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/17 16:52:58 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,13 @@ int ft_atoi(const char *str)
 	{
 		i++;
 	}
-	if (str[i] == '-')
+	if (str[i] == '+' && str[i + 1] != '-')
 	{
-		sign *= -1;
+		i++;
+	}
+	if ( str[i] == '-')
+	{
+		sign = -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')

@@ -6,13 +6,14 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:19:36 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 17:05:25 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:58:15 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 #include <stdlib.h>
+#include <stdio.h>
 int ft_isalnum(int n);
 int	ft_isalpha(int c);
 int ft_isascii(int n);

@@ -6,13 +6,13 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:28:34 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/05/31 16:30:14 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:52:13 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
     const unsigned char *ptr = (const unsigned char *)s;
     size_t i;
