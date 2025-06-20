@@ -14,6 +14,7 @@
 #define LIBFT_H
 #include <stdlib.h>
 #include <stdio.h>
+char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_isalnum(int n);
 int	ft_isalpha(int c);
 int ft_isascii(int n);
@@ -37,4 +38,9 @@ int memcmp(const void *s1, const void *s2, size_t n);
 void *memcpy(void *dest, const void *src, size_t n);
 void *memmove(void *dest, const void *src, size_t n);
 void *memset(void *s, int c, size_t n);
+char	*ft_strtrim(char const *s1, char const *set);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
+
 #endif

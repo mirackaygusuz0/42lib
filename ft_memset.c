@@ -26,10 +26,3 @@ void *ft_memset(void *s, int c, size_t n)
     }
     return s;
 }
-int main()
-{
-    char buffer[5];
-    ft_memset(buffer,-1,5);
-    for (int i = 0; i < 5; i++)
-        printf("%02X",buffer[i]);
-} 
