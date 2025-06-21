@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:19:36 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/17 17:58:15 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:50:26 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #define LIBFT_H
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
+void ft_putchar_fd(char c, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
+void ft_putstr_fd(char *s, int fd);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_isalnum(int n);
 int	ft_isalpha(int c);
