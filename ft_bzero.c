@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:47:20 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/05/31 15:43:50 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/23 17:28:21 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void ft_bzero(void *s, size_t n)
 {
-    int i;
+    size_t i;
     unsigned char *ptr;
     
     ptr = s;
     i = 0;
     while(i < n)
     {
-        ptr[i] == '\0';
+        ptr[i] = '\0';
         i++;
     }
 }

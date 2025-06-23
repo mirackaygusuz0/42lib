@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:55:29 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 16:58:01 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/23 17:33:52 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isalnum(int n)
 {
-    if ((n <= 'Z' && n >= 'z' || n <= 'A' && n >= 'a') || (n <= '9' && n >= '0'))
-        return (1);
+    if (ft_isalpha(n) || ft_isdigit(n))
+        return (n);
     return (0);
 }

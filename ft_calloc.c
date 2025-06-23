@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:07:42 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 17:15:51 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/06/23 17:47:40 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void *ft_calloc(size_t n, size_t size)
 {
-    size_t total;
-    total = n * size;
+    unsigned char *tmp;
+    size_t i;
 
-    if (size != 0 && total / size != n)
+    i = 0;
+    tmp = malloc(n * size);
+
+    if (!tmp)
         return (NULL);
+    while (i < n * size)
+        tmp[i++] = 0;
     
-    void* ptr;
-    ptr = malloc(total);
-    if (ptr == NULL)
-        return (NULL);
-
-    memset(ptr, 0, total);
-
-    return ptr;
+    return (tmp);
 }
