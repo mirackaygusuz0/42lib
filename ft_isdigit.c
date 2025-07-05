@@ -6,11 +6,9 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 17:29:38 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 16:58:30 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:25:17 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int n)
 {

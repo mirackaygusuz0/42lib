@@ -6,11 +6,9 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:55:29 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/07/05 15:08:43 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:25:07 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int n)
 {

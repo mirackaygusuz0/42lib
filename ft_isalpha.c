@@ -6,11 +6,9 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 17:05:33 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/23 17:32:57 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:25:10 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

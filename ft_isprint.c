@@ -6,11 +6,9 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:23:08 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/07/05 15:10:09 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:25:20 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int n)
 {
