@@ -6,15 +6,15 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:12:05 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/23 17:31:49 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:48:18 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int n)
+int	ft_tolower(int n)
 {
-    if (n >= 'A' && n <= 'Z' )
-        n += 32;
-    return (n);
+	if (n >= 'A' && n <= 'Z' )
+		n += 32;
+	return (n);
 }

@@ -6,15 +6,15 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:10:00 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/05/31 15:43:50 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:48:28 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int n)
+int	ft_toupper(int n)
 {
-    if (n >= 'a' && n <= 'z')
-        return (n - 32);
-    return (n);
+	if (n >= 'a' && n <= 'z')
+		return (n - 32);
+	return (n);
 }

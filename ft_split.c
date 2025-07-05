@@ -6,63 +6,54 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 19:14:40 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/23 19:58:34 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:40:29 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_word(char const *str, char sep)
+static int	ft_word_count(char const *str, char sep)
 {
 	int	i;
-	int	flag;
-	int	counter;
+	int	in_word;
+	int	count;
 
-	if (!str)
-		return (0);
 	i = 0;
-	counter = 0;
-	flag = 0;
+	in_word = 0;
+	count = 0;
 	while (str[i])
 	{
-		while (str[i] == sep)
-			i++;
-		while (str[i] && str[i] != sep && ++flag)
-			i++;
-		if (flag > 0)
+		if (str[i] != sep && !in_word)
 		{
-			flag = 0;
-			counter++;
+			in_word = 1;
+			count++;
 		}
+		else if (str[i] == sep)
+			in_word = 0;
+		i++;
 	}
-	return (counter);
+	return (count);
 }
 
-static void	ft_free_set(char **ptr, size_t j)
+static void	ft_free(char **arr, size_t j)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < j)
 	{
-		free(ptr[i]);
+		free(arr[i]);
 		i++;
 	}
-	free (ptr);
+	free(arr);
 }
 
-char	**ft_split(char const *s, char c)
+static int	ft_fill_split(char **arr, char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	start;
-	char			**ptr;
+	size_t	i;
+	size_t	j;
+	size_t	start;
 
-	if (!s)
-		return (NULL);
-	ptr = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
-	if (!ptr)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -74,15 +65,26 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (i > start)
 		{
-			ptr[j] = ft_substr(s, start, i - start);
-			if (!ptr[j])
-			{
-				ft_free_set(ptr, j);
-				return (NULL);
-			}
+			arr[j] = ft_substr(s, start, i - start);
+			if (!arr[j])
+				return (ft_free(arr, j), -1);
 			j++;
 		}
 	}
-	ptr[j] = NULL;
-	return (ptr);
+	arr[j] = NULL;
+	return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
+	if (!result)
+		return (NULL);
+	if (ft_fill_split(result, s, c) == -1)
+		return (NULL);
+	return (result);
 }

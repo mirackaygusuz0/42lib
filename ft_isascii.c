@@ -6,15 +6,15 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:18:18 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/01 16:58:23 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:09:42 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int n)
+int	ft_isascii(int n)
 {
-    if (n >= 0 && n <= 127)
-        return(1);
-    return(0);
+	if (n >= 0 && n <= 127)
+		return (1);
+	return (0);
 }

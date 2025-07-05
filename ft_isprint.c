@@ -6,15 +6,15 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:23:08 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/23 17:34:59 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:10:09 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int n)
+int	ft_isprint(int n)
 {
-    if (n <= 126 && n >= 32)
-        return (n);
-    return(0);
+	if (n <= 126 && n >= 32)
+		return (n);
+	return (0);
 }

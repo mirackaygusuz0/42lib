@@ -6,42 +6,37 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:30:29 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/06/17 17:52:25 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:54:40 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-    unsigned char *d = (unsigned char *)dest;
-    const unsigned char *s = (const unsigned char *)src;
+	size_t				i;
+	unsigned char		*dstmv;
+	const unsigned char	*srcmv;
 
-    if (d == s || n == 0)
-    {
-        return dest;
-    }
-    
-    if (d > s && d < s + n)
-    {
-        size_t i;
-        i = n;
-        while (i>0)
-        {
-            i--;
-            d[i] = s[i];
-            
-        }
-    }
-    else 
-    {
-        size_t i;
-        i = 0;
-        while (i < n)
-        {
-            d[i] = s[i];
-            i++;
-        }
-    }
-    return dest;
+	if (!dest && !src)
+		return (NULL);
+	dstmv = (unsigned char *)dest;
+	srcmv = (const unsigned char *)src;
+	i = 0;
+	if (dstmv == srcmv || len == 0)
+		return (dest);
+	if (dstmv > srcmv && dstmv < srcmv + len)
+	{
+		while (len--)
+			dstmv[len] = srcmv[len];
+	}
+	else
+	{
+		while (i < len)
+		{
+			dstmv[i] = srcmv[i];
+			i++;
+		}
+	}
+	return (dest);
 }
