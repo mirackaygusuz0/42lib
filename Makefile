@@ -1,5 +1,5 @@
 NAME = libft.a
-GCC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
@@ -15,7 +15,7 @@ OBJS = $(SRCS:.c=.o)
 RM = rm -rf
 
 $(NAME): 
-	$(GCC) $(CFLAGS) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 	ar rc $(NAME) $(OBJS)
 
 all: $(NAME)

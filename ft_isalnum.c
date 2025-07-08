@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 20:55:29 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/07/05 16:25:07 by mukaygus         ###   ########.fr       */
+/*   Created: 2025/07/07 17:52:05 by mukaygus          #+#    #+#             */
+/*   Updated: 2025/07/07 17:54:21 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int n)
+int	ft_isalnum(int c)
 {
-	if (ft_isalpha(n) || ft_isdigit(n))
-		return (n);
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
+		|| (c >= 97 && 122 >= c))
+		return (1);
 	return (0);
 }

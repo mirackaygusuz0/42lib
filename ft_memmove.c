@@ -6,7 +6,7 @@
 /*   By: mukaygus <mukaygus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:30:29 by mukaygus          #+#    #+#             */
-/*   Updated: 2025/07/05 15:54:40 by mukaygus         ###   ########.fr       */
+/*   Updated: 2025/07/08 19:10:28 by mukaygus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,16 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	i = 0;
 	if (dstmv == srcmv || len == 0)
 		return (dest);
-	if (dstmv > srcmv && dstmv < srcmv + len)
+	if (dstmv > srcmv)
 	{
 		while (len--)
 			dstmv[len] = srcmv[len];
 	}
 	else
-	{
-		while (i < len)
+			while (i < len)
 		{
 			dstmv[i] = srcmv[i];
 			i++;
 		}
-	}
 	return (dest);
 }
